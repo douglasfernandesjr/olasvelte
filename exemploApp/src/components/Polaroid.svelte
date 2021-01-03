@@ -83,8 +83,8 @@
 
   <div class="polaroid {classClass}" >
     <img {src} {alt} on:click={photoClick} />
+    <h3>{alt}</h3>
     <slot>
-      <h3>{alt}</h3>
     </slot>
     {#if turnLeft}
       <div>left</div>
