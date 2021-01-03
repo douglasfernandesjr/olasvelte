@@ -1,7 +1,7 @@
 <script>
-    import { onMount, beforeUpdate, afterUpdate } from "svelte";
+    import { onMount, beforeUpdate, afterUpdate, onDestroy } from "svelte";
   
-    /** propriedade url */
+    /** propriedade src */
     export let src;
   
     /** Propriedade alt */
@@ -22,6 +22,10 @@
     });
   
     afterUpdate(() => {
+      console.log("the component just updated");
+    });
+
+    onDestroy(() => {
       console.log("the component just updated");
     });
   
@@ -66,12 +70,12 @@
   
 <!--
   @component
-  Here's some documentation for this component.
-  It will show up on hover.
+  Aqui vai a documentação para o seu componente
+  Vai aparecer no  hover.
   
-  - You can use markdown here.
-  - You can also use code blocks here.
-  - Usage:
+  - Você pode usar markdown aqui.
+  - E também pode usar code blocks.
+  - Exemplo:
     ```tsx
     <Polaroid src={src} alt={alt}>
       ```

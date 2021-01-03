@@ -1,11 +1,12 @@
 <script>
-	export let name;
-</script>
+	import Polaroid from "./components/Polaroid.svelte";
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+	export let name;
+
+	let src =
+        "https://www.viagenscinematograficas.com.br/wp-content/uploads/2020/02/Top-10-Melhores-Praias-Brasil-Capa-2.jpg";
+    let alt = "Arraial do Cabo";
+</script>
 
 <style>
 	main {
@@ -28,3 +29,9 @@
 		}
 	}
 </style>
+
+<main>
+	<h1>Hello {name}!</h1>
+</main>
+
+<Polaroid src={src} alt={alt} />

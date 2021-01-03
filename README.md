@@ -11,6 +11,6 @@ O que precisa para começar.
  - E a extensão [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
 
  Próximos Passos:
- - Fazer o [tutorial completo](https://svelte.dev/tutorial/basics).
- - Leia a [documentação](https://svelte.dev/docs) para entender melhor.
- - E veja [estes exemplos](https://svelte.dev/examples#hello-world). 
+ - Fazer o [Tutorial completo](https://svelte.dev/tutorial/basics).
+ - Leia a [Documentação](https://svelte.dev/docs) para entender melhor.
+ - E veja [Estes exemplos](https://svelte.dev/examples#hello-world). 

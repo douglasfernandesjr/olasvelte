@@ -1,3 +1,14 @@
+Criando este projeto:
+
+```
+npx degit sveltejs/template olaTypescript
+cd olaTsApp
+node scripts/setupTypeScript.js
+```
+
+
+
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
