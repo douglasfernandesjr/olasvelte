@@ -50,6 +50,8 @@ export function addNewTravel(name, srcImg) {
 
 export function moveTravel(travel) {
   travelList.update((list) => {
+    // filter -> remove
+    // concat -> adiciona no final
       return list.filter((t) => t !== travel).concat(travel);
   });
 }
