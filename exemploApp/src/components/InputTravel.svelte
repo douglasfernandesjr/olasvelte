@@ -1,5 +1,4 @@
 <script>
-    import Polaroid from "./Polaroid.svelte";
     import { travelList } from "../stores/travelList";
 
     let imgUrl = "";
@@ -50,7 +49,4 @@
             placeholder="digite aqui o nome do local" />
         <button on:click={addTravel}>Adicionar</button>
     </div>
-    {#if imgUrl || name}
-    <Polaroid src={imgUrl} alt={name} />
-    {/if}
 </div>
