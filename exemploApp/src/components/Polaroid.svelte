@@ -9,6 +9,10 @@
 
     let turnLeft = false;
 
+    // variavel reativa, atualiza sempre que os valores mudam.
+    // funciona tipo um useEffect do react
+    $: classClass = turnLeft ? 'left' : 'right';
+
     onMount(() => {
       console.log("the component has mounted");
     });
@@ -73,8 +77,8 @@
       ```
 -->
 
-  <div class="polaroid" class:left={turnLeft} class:right={!turnLeft} on:click={photoClick}>
-    <img {src} {alt} />
+  <div class="polaroid {classClass}" >
+    <img {src} {alt} on:click={photoClick} />
     <slot>
       <h3>{alt}</h3>
     </slot>
