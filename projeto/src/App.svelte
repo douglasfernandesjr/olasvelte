@@ -37,4 +37,5 @@
 	</p>
 </main>
 <Polaroid  src={imgUrl} alt="Descrição da imagem" >
+	Conteúdo adicional
 </Polaroid>

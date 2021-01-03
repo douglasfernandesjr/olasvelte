@@ -1,19 +1,16 @@
 <script>
     import InputTravel from "./InputTravel.svelte";
+    import PhotoTravel from "./PhotoTravel.svelte";
     import { travelList } from "../stores/travelList";
-    import Polaroid from "./Polaroid.svelte";
     import { crossfade, scale } from "svelte/transition";
+
+    //travelList.subscribe
 
     const [send, receive] = crossfade({
         duration: 200,
         fallback: scale, //slide , fly
     });
-
-    function move(travel) {
-        travelList.update((list) => {
-            return list.filter((t) => t !== travel).concat(travel);
-        });
-    }
+    
 </script>
 
 <style>
@@ -47,7 +44,7 @@
 <div class="main">
     <h1>To Travel - Svelte</h1>
     <div class="box">
-        <InputTravel class="cssClass" />
+        <InputTravel />
     </div>
     <div class="list">
         <div class="list-totravel">
@@ -57,13 +54,7 @@
                     class="photo"
                     in:receive={{ key: travel.id }}
                     out:send={{ key: travel.id }}>
-                    <Polaroid src={travel.srcImg} alt={travel.name}>
-                        <input
-                            type="checkbox"
-                            bind:checked={travel.visited}
-                            on:change={() => move(travel)} />
-                        Visitado
-                    </Polaroid>
+                    <PhotoTravel {travel} />
                 </div>
             {/each}
         </div>
@@ -74,13 +65,7 @@
                     class="photo"
                     in:receive={{ key: travel.id }}
                     out:send={{ key: travel.id }}>
-                    <Polaroid src={travel.srcImg} alt={travel.name}>
-                        <input
-                            type="checkbox"
-                            bind:checked={travel.visited}
-                            on:change={() => move(travel)} />
-                        Visitado
-                    </Polaroid>
+                    <PhotoTravel {travel} />
                 </div>
             {/each}
         </div>

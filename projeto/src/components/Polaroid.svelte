@@ -59,4 +59,5 @@
 <div class="polaroid {classClass}">
     <img {src} {alt} on:click={photoClick} />
     <h3>{alt}</h3>
+    <slot></slot>
 </div>

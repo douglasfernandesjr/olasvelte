@@ -32,3 +32,24 @@ const startList = [
 ];
 
 export const travelList = writable(startList);
+
+export function addNewTravel(name, srcImg) {
+  travelList.update((list) => {
+    let newTravel = {
+      name: name,
+      srcImg: srcImg,
+      visited: false,
+      id: list.length + 1,
+    };
+
+    list.push(newTravel);
+    return list;
+    //return [...list, newTravel];
+  });
+}
+
+export function moveTravel(travel) {
+  travelList.update((list) => {
+      return list.filter((t) => t !== travel).concat(travel);
+  });
+}

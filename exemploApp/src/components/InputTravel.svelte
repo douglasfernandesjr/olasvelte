@@ -1,23 +1,11 @@
 <script>
-    import { travelList } from "../stores/travelList";
+    import { addNewTravel } from "../stores/travelList";
 
     let imgUrl = "";
     let name = "";
 
     function addTravel() {
-        travelList.update((list) => {
-            let newTravel = {
-                name: name,
-                srcImg: imgUrl,
-                visited: false,
-                id: (list.length+1)
-            };
-
-            list.push(newTravel);
-            return list;
-            //return [...list, newTravel];
-        });
-
+        addNewTravel(name,imgUrl);
         imgUrl = "";
         name = "";
     }
